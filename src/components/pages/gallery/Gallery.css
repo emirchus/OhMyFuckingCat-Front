@@ -1,0 +1,241 @@
+.gallerywrap {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 8px;
+}
+.catcontainer:hover img {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.catcontainer {
+    min-width: 150px;
+    max-width: 250px;
+    min-height: 150px;
+    max-height: 250px;    
+    margin: 5px;
+    overflow: hidden;
+    border-radius: 10px;
+    opacity: 1;
+    visibility: visible;
+    cursor: pointer;
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+.catcontainer>h3{
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    font-family: 'QuickSand', sans-serif;
+    color: white;
+    text-shadow: 0 0 4px black;
+}
+.catcontainer>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    opacity: .9;
+    margin: auto;
+    transition: all .8s cubic-bezier(0.8, 0, 0, 1);
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.catwrap>a {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: rgba(255, 255, 255, 0.623);
+    cursor: pointer;
+}
+
+.catwrap>a:hover {
+    color: white;
+}
+
+.showmore {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: #2c2a2ac4;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.showmore button {
+    min-width: 20%;
+    margin: auto;
+    border: none;
+    outline: none;
+    background: white;
+    height: 80%;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    border: #2c2a2a;
+    border-radius: 8px;
+    cursor: pointer;
+    transform: scale(.8);
+    transition: transform .5s cubic-bezier(1, 0, 0, 1);
+}
+
+.showmore button:hover {
+    transform: scale(1)
+}
+
+.catwrap {
+    display: flex;
+    width: 100%;
+    max-height: 10%;
+    margin: auto;
+    position: relative;
+    justify-content: start;
+}
+
+.catwrap .imagefull {
+    min-width: 50%;
+    min-height: 50%;
+    max-height: 70%;
+    position: relative;
+}
+
+.imagefull>a {
+    position: absolute;
+    top: 45%;
+    outline: 0;
+    width: 32px;
+    height: 52px;
+    text-indent: -9999px;
+    z-index: 90;
+    cursor: pointer;
+}
+
+.imagefull .btn-prev {
+    left: 20px;
+    background: url(../../assets/prev.png) no-repeat -15px 0px;
+    background-image: url(../../assets/prev.png);
+    background-position-x: -15px;
+    background-position-y: 0px;
+    background-size: initial;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+}
+
+.imagefull .btn-next {
+    right: 20px;
+    background: url(../../assets/next.png) no-repeat 0px 0px;
+}
+
+.catwrap .imagefull img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.catwrap .linkshare {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 0 auto auto;
+    width: 100%;
+}
+
+.catwrap .linkshare>p span {
+    display: block;
+    font-size: .8em;
+    opacity: .45;
+}
+
+.catwrap .linkshare>p {
+    font-family: 'Roboto';
+    color: white;
+    padding: 4px;
+    margin: 5px auto;
+}
+
+.catwrap .linkshare>input[type="text"] {
+    border: 1px solid white;
+    outline: none;
+    padding: 8px;
+    width: max-content;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: white;
+    background: #2c2a2a;
+    border-radius: 8px;
+    margin: 5px auto;
+}
+
+.catwrap .linkshare>a {
+    width: fit-content;
+    padding: 8px;
+    margin: 5px 0;
+    text-decoration: none;
+    color: rgba(245, 222, 179, 0.5);
+    transition: all .5s ease-in-out;
+}
+
+.catwrap .linkshare>a span {
+    margin: auto 5px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Quicksand', 'Roboto', sans-serif;
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.catwrap .linkshare>a:hover {
+    transform: translateY(-2px);
+}
+
+.catwrap .linkshare>a:active {
+    transform: translateY(2px);
+}
+
+.linkshare>a:active span, .linkshare>a:active i {
+    color: white;
+}
+
+.linkshare>a:hover span, .linkshare>a:hover i {
+    color: rgba(255, 255, 255, 0.712);
+}
+
+.twitter i {
+    color: rgb(53, 177, 177) !important;
+}
+
+.facebook i {
+    color: #3C5A99 !important;
+}
+
+.whatsapp i {
+    color: #4FCE5D !important;
+}
+
+@media screen and (max-width: 320px) {}
+
+@media screen and (max-width: 375px) {}
+
+@media screen and (max-width: 480px) {
+    .catwrap {
+        flex-direction: column;
+    }
+    .catwrap .imagefull {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 620px) {}

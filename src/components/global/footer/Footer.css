@@ -1,0 +1,43 @@
+footer{
+    _background: red;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 8px 2px;
+}
+
+footer>.logo{
+    margin: 5px auto;
+    width: 40px;
+    height: 40px;
+}
+footer>ul{
+    display: block;
+    clear: both;
+    margin: 5px auto 0;
+    padding: 0;
+}
+
+footer>ul>li{
+    display: inline-block;
+    margin: auto 5px;
+    font-family: 'Quicksand';
+    text-transform: lowercase;
+    font-size: 15px;    
+    text-align: center;
+}
+
+footer>ul>li a {
+    color: rgba(245, 245, 245, 0.411);
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+    font-family: 'Quicksand';
+    font-weight: bold;
+    text-align: center;
+}
+
+footer>ul>li:hover a {
+    color: rgba(255, 255, 255, 0.882);    
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.835);
+}
